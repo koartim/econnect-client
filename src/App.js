@@ -1,5 +1,6 @@
 import React from 'react';
 import Employees from './Employees';
+import NavBar from './components/layout/NavBar';
 
 
 class App extends React.Component {
@@ -19,11 +20,11 @@ class App extends React.Component {
     })
   }
   render() {
+      const { employees } = this.state
+      console.log(employees)
     return(
-      <div>
-        {this.state.employees.map(emp => {
-          return <h1>{emp.firstName}</h1>
-        })}
+      <div className="App">
+        <NavBar title="e-connect" icon="fas fa-project-diagram" />
       </div>
     )
   }
