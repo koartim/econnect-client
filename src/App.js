@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Employees from './Employees';
 import NavBar from './components/layout/NavBar';
-
+import { Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
 
@@ -25,6 +25,13 @@ class App extends React.Component {
     return(
       <div className="App">
         <NavBar title="e-connect" icon="fas fa-project-diagram" />
+        <div className="container">
+          <Switch>
+            <Fragment>
+              <Employees employees={employees}/>
+            </Fragment>
+          </Switch>
+        </div>
       </div>
     )
   }
